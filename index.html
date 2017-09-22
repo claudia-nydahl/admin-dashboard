@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="admin-panel" name="description">
+	<meta content="admin, data, dynamic" name="keywords">
+	<meta content="Claudia Nydahl" name="author"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Woven</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div id="app">
+
+		<nav class="col-dk-12 black tall-80 hidden-md hidden-sm">
+				<div class="logo logo-md"></div>
+					<ul class="main-menu main-menu-md hidden-md hidden-sm">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Collection</a></li>
+						<li><a href="#">Lookbook</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Profile</a></li>
+					</ul>
+		</nav>
+
+		<nav class="col-md-12 col-sm-12 black tall-80 hidden-dk">
+			<div class="logo-sm"></div>
+			<a href="#" class="icon"><i class="fa fa-bars"></i></a>
+				<ul class="drop-menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Collection</a></li>
+					<li><a href="#">Lookbook</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+		</nav>
+
+		<h1 class="login-header">Login</h1>
+
+		<form>
+	 		<div class="group">
+	    		<input id="name" type="text"><span class="highlight"></span><span class="bar"></span>
+	    		<label>Name</label>
+	  		</div>
+	  		<div class="group">
+	    		<input id="email" type="email"><span class="highlight"></span><span class="bar"></span>
+	    		<label>Email</label>
+	  		</div>
+	  		<button type="button" class="button buttonBlue" v-on:click="validateForm()">Sign In
+	    		<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+	  		</button>
+		</form>
+
+		<footer class="col-dk-12 tall-80 black">
+			<div class="social-media">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+			</div>
+			<p>Copyright &copy; 2017 Woven. All Rights Reserved. Terms & Conditions</p>
+		</footer>
+
+	</div>
+
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

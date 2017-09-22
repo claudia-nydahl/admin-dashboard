@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="admin-panel" name="description">
+	<meta content="admin, data, dynamic" name="keywords">
+	<meta content="Claudia Nydahl" name="author"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Woven</title>
+</head>
+<body>
+
+	<div id="app">
+
+	<link rel="stylesheet" type="text/css" v-bind:href="current_template.value">
+
+		<nav class="col-dk-12 black tall-80 hidden-md hidden-sm">
+				<div class="logo logo-md"></div>
+					<ul class="main-menu main-menu-md hidden-md hidden-sm">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Collection</a></li>
+						<li><a href="#">Lookbook</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Profile</a></li>
+					</ul>
+		</nav>
+
+		<nav class="col-md-12 col-sm-12 black tall-80 hidden-dk">
+			<div class="logo-sm"></div>
+			<a href="#" class="icon"><i class="fa fa-bars"></i></a>
+				<ul class="drop-menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Collection</a></li>
+					<li><a href="#">Lookbook</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+		</nav>
+
+		<section class="col-dk-4 col-sm-12 tall-400 grey admin">
+			<h1>Orders</h1>
+			<div>
+				<p>{{ orderCount() }}</p>
+			</div>
+		</section>
+
+		<section class="col-dk-4 col-sm-12 tall-400 grey-2 admin">
+			<h1>Payments</h1>
+			<div>
+				<p>{{ paymentsReceived(tables) }}</p>
+			</div>
+		</section>
+
+		<section class="col-dk-4 col-sm-12 tall-400 grey admin">
+			<h1>Garment Count</h1>
+			<div>
+				<p>{{ garmentCount() }}</p>
+			</div>
+		</section>
+
+		<section class="col-dk-12 admin-table" style="overflow-x:auto;">
+			<table>
+				<thead>
+					<tr>
+			    		<th>Date</th>
+			    		<th>Order Number</th> 
+			    		<th>Amount</th>
+			    		<th>Payment Status</th>
+			  		</tr>
+		  		</thead>
+		  		<tbody>
+		  			<template v-for="table in tables">
+				  		<tr >
+				    		<td>{{ table.date }}</td>
+				    		<td>{{ table.order }}</td> 
+				    		<td>{{ table.amount }}</td>
+				    		<td>{{ table.status }}</td>
+				  		</tr>
+			  		</template>
+		  		</tbody>
+			</table>
+		</section>
+
+		<template v-for="template in templates">
+          		<button class="theme-button" v-on:click="setTemplate(template.id)">{{ template.name }}
+            	<span v-if="template.id == default_template">(Default)</span>
+          		</button>
+        </template>
+
+		<footer class="col-dk-12 tall-80 black">
+			<div class="social-media">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+			</div>
+			<p>Copyright &copy; 2017 Woven. All Rights Reserved. Terms & Conditions</p>
+		</footer>
+
+	</div>
+
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

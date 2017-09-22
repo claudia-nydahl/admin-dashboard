@@ -1,0 +1,250 @@
+@import url("vendor/reset.css"); 
+@import url('https://fonts.googleapis.com/css?family=Prata|Quicksand:300,400,700');
+@import url("../icons/css/font-awesome.min.css");
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'column-grid.scss';
+@import 'media-queries.scss';
+@import url("vendor/login.css");
+
+/* basic styles */ 
+
+html, body {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+}
+p {
+	font-family: 'Prata', serif;
+	line-height: 1.5;
+}
+h1 {
+	font-family: 'Prata', serif;
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-left: 100px;
+}
+.login-header {
+	@extend h1;
+	margin: 0 auto;
+	margin-top: 150px;
+	text-align: center;
+}
+
+/* nav styles */ 
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+a {
+	text-decoration: none;
+	color: $black;
+}
+.logo {
+	background-image: url('../img/woven-logo.png');
+	background-size: contain;
+	width: 180px;
+	height: 40px;
+	background-repeat: no-repeat;
+	margin-top: 26px;
+	margin-left: 100px;
+	float: left;
+	box-sizing: border-box;
+}
+.main-menu {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	text-align: right;
+	width: auto;
+	margin-top: 28px;
+	margin-right: 100px;
+	float: right;
+	box-sizing: border-box;
+
+	li {
+		display: inline;
+		padding: 10px;
+		font-size: 1em;
+		line-height: 1.6;
+	}
+
+	a {
+		text-decoration: none;
+		color: $white;
+		padding: 6px 0;
+		@include transition;
+
+		&:hover {
+			font-weight: bolder;
+			@include transition;
+		}
+	}
+}
+.drop-menu {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	display: none;
+	@include transition;
+
+	li {
+		padding: 10px;
+	}
+
+	li:hover {
+		background: rgba(0,0,0,0.4);
+		color: $white;
+	}
+
+	a {
+		color: $white;
+	}
+}
+.icon {
+  color: $white;
+  font-size: 2em;
+  padding:10px;
+  margin-top: 12px;
+  margin-right: 25px;
+  text-align: right;
+  float: right;
+  	
+  	&:focus + .drop-menu {
+  		display: block;
+  		@include transition;
+  	}
+}
+
+/* admin components */ 
+
+.admin {
+
+	h1 {
+		margin-left: 0;
+		text-align: center;
+		padding-top: 115px;
+		font-size: 1.5em;
+	}
+	p {
+		margin-left: 0;
+		text-align: center;
+		font-size: 130px; 
+		margin-top: 5px;
+	}
+}
+
+.admin-table {
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+th {
+	text-align: left;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+table, th, td {
+    border-bottom: 1px solid #e6e7e8;
+    border-collapse: collapse;
+}
+table {
+	width: 80%;
+	margin: 0 auto;
+}
+th, td {
+	width: 20%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* for column grid */ 
+
+.black {
+	background-color: rgba(0,0,0,0.4);
+}
+.tall-80 {
+	height: 80px;
+}
+.tall-400 {
+	height: 400px;
+}
+.clearfix {
+	display: block;
+	float: none;
+	clear: both;
+}
+.hidden-dk {
+	display: none;
+}
+
+
+/* footer */ 
+
+footer {
+
+	p {
+		float: left;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 300;
+		letter-spacing: 5px;
+		margin-left: 100px;
+		padding-top: 21px;
+		color: #ffffff;
+	}
+
+	i {
+		color: #ffffff;
+		text-align: center;
+		font-size: 2em;
+		padding: 0 10px;
+		@include transition;
+
+		&:hover {
+			opacity: 0.6;
+			@include transition;
+		}
+	}
+
+	.social-media {
+	float: right;
+	box-sizing: border-box;
+	margin-right: 100px;
+	padding-top: 32px;
+	}
+}
+
+/* theme button */ 
+
+.theme-button {
+	border: none;
+	background-color: rgba(0,0,0,0.4);
+	width: 300px;
+	height: 50px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 10px;
+    @include transition;
+
+    &:focus {
+    	outline: none;
+    }
+
+    &:hover {
+    	background-color: rgba(0,0,0,0.6);
+    	@include transition;	
+    }
+}

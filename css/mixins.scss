@@ -1,0 +1,7 @@
+@mixin transition($transition: 0.25s all ease) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-os-transition: $transition;
+	transition: $transition;
+}
+

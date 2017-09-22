@@ -1,0 +1,51 @@
+@media screen and (min-width: 180px) and (max-width: 768px) {
+  .hidden-sm {
+    display: none; }
+  .logo-sm {
+    background-image: url("../img/woven-logo.png");
+    background-size: contain;
+    width: 180px;
+    height: 40px;
+    background-repeat: no-repeat;
+    margin-top: 26px;
+    margin-left: 25px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  h1 {
+    font-size: 2em; }
+  footer p {
+    float: none;
+    font-size: 0.6em;
+    letter-spacing: 0;
+    padding-top: 8px;
+    text-align: center;
+    margin: 0 auto; }
+  .social-media {
+    float: none;
+    display: block;
+    margin-right: 0px;
+    width: 107px;
+    margin: 0 auto;
+    padding-top: 20px; } }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hidden-md {
+    display: none; }
+  .main-menu-md {
+    margin-right: 26px; }
+  .logo-md {
+    background-image: url("../img/woven-logo.png");
+    background-size: contain;
+    width: 180px;
+    height: 40px;
+    background-repeat: no-repeat;
+    margin-top: 26px;
+    margin-left: 26px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  footer p {
+    margin-left: 25px; }
+  .social-media {
+    margin-right: 25px; } }

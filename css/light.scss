@@ -1,0 +1,19 @@
+@import 'styles.scss';
+
+body {
+  color: $black;
+  background-color: $grey-1;
+}
+
+.grey {
+	background-color: $grey-2;
+}
+.grey-2 {
+	background-color: $grey-1;
+}
+
+.admin {
+	p {
+		color: rgba(0,0,0,0.1);
+	}
+}
